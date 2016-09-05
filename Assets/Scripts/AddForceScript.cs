@@ -17,8 +17,20 @@ public class AddForceScript : MonoBehaviour {
 		{
 			Debug.Log (KeyCode.UpArrow.ToString());
 			rb = GetComponent<Rigidbody> ();
-			rb.AddForce(0,10, 0, ForceMode.Impulse);
+			rb.velocity = Vector2.zero;
+			rb.AddForce (new Vector2(0,300));
+			//rb.AddForce(0,10, 0, ForceMode.Impulse);
 		}
+			
+	}
 
+	void OnCollisionEnter(Collision collision)
+	{
+		Morrer ();
+	}
+
+	void Morrer()
+	{
+		Application.LoadLevel (Application.loadedLevel);
 	}
 }

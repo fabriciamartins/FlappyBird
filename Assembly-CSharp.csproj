@@ -45,7 +45,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AddForceScript.cs" />
+     <Compile Include="Assets\Scripts\AddForceScript.cs" />
+     <Compile Include="Assets\Scripts\GeradorObstaculosScript.cs" />
+     <Compile Include="Assets\Scripts\ObstaculosScript.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
