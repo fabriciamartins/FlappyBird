@@ -21,6 +21,14 @@ public class AddForceScript : MonoBehaviour {
 			rb.AddForce (new Vector2(0,300));
 			//rb.AddForce(0,10, 0, ForceMode.Impulse);
 		}
+
+		//Transforma posição de espaço do mundo para o espaço da tela.
+		Vector2 posicao = Camera.main.WorldToScreenPoint (transform.position);
+		//Se a posicao for maior que a altura da tela ou menor que 0, o personagem morre
+		if (posicao.y > Screen.height || posicao.y < 0) 
+		{
+			Morrer ();
+		}
 			
 	}
 
