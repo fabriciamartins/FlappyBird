@@ -18,7 +18,7 @@ public class AddForceScript : MonoBehaviour {
 			Debug.Log (KeyCode.UpArrow.ToString());
 			rb = GetComponent<Rigidbody> ();
 			rb.velocity = Vector2.zero;
-			rb.AddForce (new Vector2(0,300));
+			rb.AddForce (new Vector3(0,250,0));
 			//rb.AddForce(0,10, 0, ForceMode.Impulse);
 		}
 
